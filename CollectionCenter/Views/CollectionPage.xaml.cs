@@ -61,7 +61,13 @@ namespace CollectionCenter.Views;
        
             if (!string.IsNullOrEmpty(context.NewCollectableName))
             {
-                string collectableLine = $"\r\n{context.NewCollectableName};{context.NewCollectablePrice};{context.NewCollectableRating};{context.NewCollectableStatus};{context.NewCollectableComment}";
+            if (context.NewCollectableRating < 1 || context.NewCollectableRating > 10)
+            {
+                DisplayAlert("Error", "Rating must be between 1 and 10.", "OK");
+                return;
+            }
+
+            string collectableLine = $"\r\n{context.NewCollectableName};{context.NewCollectablePrice};{context.NewCollectableRating};{context.NewCollectableStatus};{context.NewCollectableComment}";
 
                 File.AppendAllText(Path.Combine(FileSystem.AppDataDirectory, $"{this.CollectionName}_collection.txt"), collectableLine);
 
