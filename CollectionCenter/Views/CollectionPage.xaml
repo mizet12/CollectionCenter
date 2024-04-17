@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionCenter.Views.CollectionPage"
+             Title="CollectionPage">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/Resources/Styles/CollectionPage.css" />
+    </ContentPage.Resources>
+    <ScrollView>
+    <VerticalStackLayout x:Name="MainVerticalStackLayout">
+        <StackLayout x:Name="OuterStackLayout">
+            <StackLayout>
+                <Entry x:Name="CollectableNameEntry" Placeholder="Nazwa przedmiotu" Text="{Binding NewCollectableName}" />
+                <Entry x:Name="CollectablePriceEntry" Placeholder="Cena" Text="{Binding NewCollectablePrice}" Keyboard="Numeric" />
+                <Entry x:Name="CollectableRatingEntry" Placeholder="Ocena" Text="{Binding NewCollectableRating}" Keyboard="Numeric" />
+
+                <Picker x:Name="CollectableStatusPicker" Title="Status" SelectedItem="{Binding NewCollectableStatus}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Nowy</x:String>
+                            <x:String>Użyty</x:String>
+                            <x:String>Na sprzedaż</x:String>
+                            <x:String>Sprzedany</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Entry x:Name="CollectableCommentEntry" Placeholder="Komentarz" Text="{Binding NewCollectableComment}" />
+                <Button x:Name="AddButton" Text="Dodaj Kolekcjonerski" Clicked="AddCollectable_Clicked" />
+            </StackLayout>
+
+            <CollectionView x:Name="CollectablesCollectionView" ItemsSource="{Binding Collectables}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding Price, StringFormat='C {0:F2}'}" />
+                            <Label Text="{Binding Rating, StringFormat='Rating: {0:F1}'}" />
+                            <Label Text="{Binding Status}" />
+                            <Label Text="{Binding Comment}" />
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <Button Text="Edit" Clicked="EditCollectable_Clicked" />
+                                <Button Text="Delete" Clicked="DeleteCollectable_Clicked" />
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

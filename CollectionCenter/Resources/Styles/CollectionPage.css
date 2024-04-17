@@ -1,0 +1,48 @@
+﻿#MainVerticalStackLayout {
+    padding: 20;
+}
+
+#OuterStackLayout {
+    background-color: #9C26DE;
+    padding: 10;
+    border-radius: 10;
+}
+
+#CollectableNameEntry,
+#CollectablePriceEntry,
+#CollectableRatingEntry,
+#CollectableStatusPicker,
+#CollectableCommentEntry {
+    background-color: #6026DE;
+    color: white;
+    padding: 10;
+    margin-bottom: 10;
+    border-radius: 5;
+}
+
+#AddButton {
+    background-color: #2662DE;
+    color: white;
+    padding: 10;
+    border-radius: 5;
+}
+
+#CollectablesCollectionView {
+    margin-top: 20;
+}
+
+    #CollectablesCollectionView Label {
+        background-color: #D926DE;
+        color: white;
+        padding: 10;
+        margin-bottom: 5;
+        border-radius: 5;
+    }
+
+    #CollectablesCollectionView Button {
+        background-color: #9370DE;
+        color: white;
+        padding: 5 10;
+        border-radius: 5;
+
+    }

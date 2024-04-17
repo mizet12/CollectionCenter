@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionCenter.Views.AllCollectionsPage"
+             Title="AllCollectionsPage">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/Resources/Styles/AllCollectionPage.css" />
+    </ContentPage.Resources>
+    <VerticalStackLayout x:Name="MainStackLayout">
+        <HorizontalStackLayout x:Name="NewCollectionLayout">
+            <Editor x:Name="NewCollectionEditor" Placeholder="Nazwa Kolekcji" Text="{Binding NewCollectionName}" />
+            <Button x:Name="AddCollectionButton" Text="Dodaj Kolekcje" Clicked="AddCollectionClicked" />
+        </HorizontalStackLayout>
+        <CollectionView x:Name="CollectionList" ItemsSource="{Binding AllCollectionz}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout>
+                        <Button x:Name="CollectionButton" Text="{Binding CollectionName}" BindingContext="{Binding .}" Clicked="ClassButtonClicked"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

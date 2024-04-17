@@ -1,0 +1,26 @@
+﻿#EditCollectablePage {
+    background-color: #2628DE;
+}
+
+#MainVerticalStackLayout {
+    padding: 20;
+}
+
+#NameEntry,
+#PriceEntry,
+#RatingEntry,
+#StatusEntry,
+#CommentEntry {
+    background-color: #9C26DE;
+    color: white;
+    padding: 10;
+    margin-bottom: 10;
+    border-radius: 5;
+}
+
+#SaveChangesButton {
+    background-color: #2662DE;
+    color: white;
+    padding: 10;
+    border-radius: 5;
+}

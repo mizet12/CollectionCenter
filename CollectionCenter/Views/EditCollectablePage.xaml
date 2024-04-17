@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionCenter.Views.EditCollectablePage"
+             Title="Edit Collectable">
+    <ContentPage.Resources>
+        <StyleSheetExtension Source="/Resources/Styles/EditPage.css" />
+    </ContentPage.Resources>
+    <VerticalStackLayout Padding="20">
+        <Entry x:Name="NameEntry" Placeholder="Name"/>
+        <Entry x:Name="PriceEntry" Placeholder="Price" Keyboard="Numeric"/>
+        <Entry x:Name="RatingEntry" Placeholder="Rating" Keyboard="Numeric"/>
+        <Entry x:Name="StatusEntry" Placeholder="Status"/>
+        <Entry x:Name="CommentEntry" Placeholder="Comment"/>
+        <Button Text="Save Changes" Clicked="SaveChanges_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

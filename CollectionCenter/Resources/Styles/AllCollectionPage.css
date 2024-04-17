@@ -1,0 +1,45 @@
+﻿#MainStackLayout {
+                    background-color: #2628DE;
+                    padding: 10;
+                    margin-bottom: 10;
+                }
+
+                #NewCollectionLayout {
+                    background-color: #2628DE;
+                    padding: 10;
+                    margin-bottom: 10;
+                }
+
+                #NewCollectionEditor {
+                    background-color: #9C26DE;
+                    color: white;
+                    border-color: #6026DE;
+                    border-width: 2;
+                    border-radius: 5;
+                    padding: 10;
+                    margin-right: 10;
+                }
+
+                #AddCollectionButton {
+                    background-color: #2662DE;
+                    color: white;
+                    border-color: #D926DE;
+                    border-width: 2;
+                    border-radius: 5;
+                    padding: 10;
+                }
+
+                #CollectionList {
+                    padding: 10;
+                    margin-top: 10;
+                }
+
+                #CollectionButton {
+                    background-color: #9370DE;
+                    color: white;
+                    border-color: #D926DE;
+                    border-width: 2;
+                    border-radius: 5;
+                    padding: 10;
+                    margin-bottom: 10;
+                }
